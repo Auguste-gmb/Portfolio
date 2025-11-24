@@ -4,7 +4,7 @@ const projectsGrid = document.querySelector(".projects-grid");
 // Ton nom d'utilisateur GitHub
 const githubUsername = "Auguste-gmb";
 
-// Liste des repos à **ne pas afficher**
+// Liste des repos à ne pas afficher
 const excludeRepos = [githubUsername];
 
 // Fonction pour récupérer les repos
@@ -20,12 +20,20 @@ async function fetchGitHubProjects() {
 			(repo) => !repo.fork && !excludeRepos.includes(repo.name)
 		);
 
-		userRepos.forEach((repo) => {
+		for (const repo of userRepos) {
 			const card = document.createElement("div");
 			card.classList.add("project-card");
 
-			// Tags simples selon le langage
-			const tags = repo.language ? `<span>${repo.language}</span>` : "";
+			// Récupérer tous les langages du repo
+			const langResponse = await fetch(
+				`https://api.github.com/repos/${githubUsername}/${repo.name}/languages`
+			);
+			const languages = await langResponse.json();
+
+			// Créer des tags pour chaque langage
+			const tags = Object.keys(languages)
+				.map((lang) => `<span>${lang}</span>`)
+				.join(" ");
 
 			card.innerHTML = `
                 <h2>${repo.name}</h2>
@@ -43,7 +51,7 @@ async function fetchGitHubProjects() {
             `;
 
 			projectsGrid.appendChild(card);
-		});
+		}
 	} catch (error) {
 		console.error(
 			"Erreur lors de la récupération des projets GitHub:",
