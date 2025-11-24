@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Compétences - Portfolio</title>
+		<link rel="stylesheet" href="../style/style.css" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			rel="stylesheet"
+			href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;600;700&display=swap"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+		/>
+	</head>
+	<body>
+		<canvas id="network-bg"></canvas>
+
+		<header>
+			<a href="#" class="logo">Auguste</a>
+			<nav>
+				<a href="../index.html">Accueil</a>
+				<a href="./projects.html">Projets</a>
+				<a href="./skills.html">Compétences</a>
+				<a href="./experience.html">Expériences</a>
+				<a href="" class="active">Contact</a>
+			</nav>
+		</header>
+
+		<section class="contact-section">
+			<h1>Contactez-moi</h1>
+			<p class="subtitle">N'hésitez pas à m'envoyer un message !</p>
+
+			<div class="contact-container">
+				<form class="contact-form" id="contactForm">
+					<label for="name">Nom</label>
+					<input
+						type="text"
+						id="name"
+						name="name"
+						placeholder="Votre nom"
+						required
+					/>
+
+					<label for="email">Email</label>
+					<input
+						type="email"
+						id="email"
+						name="email"
+						placeholder="Votre email"
+						required
+					/>
+
+					<label for="message">Message</label>
+					<textarea
+						id="message"
+						name="message"
+						rows="6"
+						placeholder="Votre message..."
+						required
+					></textarea>
+
+					<button type="submit" class="btn">Envoyer</button>
+				</form>
+
+				<div class="contact-info">
+					<div class="info-item">
+						<i class="fas fa-envelope"></i>
+						<span>auguste.gambu@viacesi.fr</span>
+					</div>
+					<div class="info-item">
+						<i class="fas fa-phone"></i>
+						<span>+33 6 41 10 61 40</span>
+					</div>
+					<div class="info-item">
+						<i class="fas fa-map-marker-alt"></i>
+						<span>Rouen, France</span>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<script src="../javaScript/network.js"></script>
+		<script src="../javaScript/contact.js"></script>
+	</body>
+</html>

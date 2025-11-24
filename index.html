@@ -1,11 +1,62 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Document</title>
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+		/>
+		<link rel="stylesheet" href="style/style.css" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			rel="stylesheet"
+			href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;600;700&display=swap"
+		/>
+
+		<title>Portfolio</title>
 	</head>
+
 	<body>
-		<h1>Titre</h1>
+		<canvas id="network-bg"></canvas>
+		<header>
+			<a href="#" class="logo">Auguste</a>
+			<nav>
+				<a href="#" class="active">Accueil</a>
+				<a href="pages/projects.html">Projets</a>
+				<a href="pages/skills.html">Compétences</a>
+				<a href="pages/experience.html">Expériences</a>
+				<a href="pages/contact.html">Contact</a>
+			</nav>
+		</header>
+
+		<section class="home">
+			<div class="home-img">
+				<img src="" alt="" />
+			</div>
+			<div class="home-content">
+				<h1><span>Auguste</span></h1>
+				<h3 class="typing-text"><span></span></h3>
+				<p class="intro">
+					Étudiant en informatique à CESI Rouen. Curieux, motivé et
+					passionné par les systèmes intelligents et les algorithmes.
+				</p>
+
+				<div class="social-icons">
+					<a
+						href="https://www.linkedin.com/in/auguste-gambu-a299a533b/"
+						target="_blank"
+						><i class="fa-brands fa-linkedin"></i
+					></a>
+					<a href="https://github.com/Auguste-gmb" target="_blank"
+						><i class="fa-brands fa-github"></i
+					></a>
+				</div>
+
+				<a href="pages/contact.html" class="btn">Me Contacter</a>
+			</div>
+		</section>
+		<script src="javaScript/network.js"></script>
 	</body>
 </html>
