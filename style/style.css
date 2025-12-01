@@ -348,7 +348,10 @@ span {
 
 .project-card p {
 	font-size: 1.5rem;
+	height: auto;
 	color: #cecece;
+	height: 12rem;
+	overflow: hidden;
 }
 
 /* Tags */
@@ -381,6 +384,7 @@ span {
 	background: rgba(120, 120, 255, 0.2);
 	box-shadow: 0 0 15px rgba(120, 120, 255, 0.6);
 }
+
 /* ===== PAGE COMPÉTENCES ===== */
 .skills-section {
 	padding: 100px 8%;
