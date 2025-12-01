@@ -86,44 +86,78 @@ nav a.active {
 	justify-content: space-between;
 	z-index: 999; /* au-dessus du nav */
 }
+
+.menu-btn span {
 	display: block;
 	height: 4px;
 	width: 100%;
 	background: var(--accent);
 	border-radius: 3px;
 	transition: transform 0.28s ease, opacity 0.2s ease;
+}
 
+/* transformation en croix */
+.menu-btn.active span:nth-child(1) {
+	transform: translateY(12px) rotate(45deg);
+}
+.menu-btn.active span:nth-child(2) {
+	opacity: 0;
+}
+.menu-btn.active span:nth-child(3) {
+	transform: translateY(-12px) rotate(-45deg);
+}
+
+/* ===== NAV MOBILE ===== */
 @media (max-width: 995px) {
+	/* cacher le nav standard si tu as d'autres règles, on le remplace par nav mobile */
 	nav {
-		position: absolute;
-		display: none;
+		position: fixed;
 		top: 0;
-		right: 0;
-		width: 40%;
+		right: -100%;
+		width: 68%; /* ajustable (40%/60%/68%) */
+		max-width: 360px;
+		height: 100vh;
+		padding-top: 120px; /* laisse de la place au header */
+		padding-left: 28px;
+		background: linear-gradient(
+			180deg,
+			rgba(31, 36, 44, 0.98),
+			rgba(31, 36, 44, 0.95)
+		);
 		border-left: 3px solid var(--accent);
-		border-bottom: 3px solid var(--accent);
-		border-bottom-left-radius: 2rem;
-		padding: 1rem solid;
-		background-color: var(--darker);
-		border-top: 0.1rem solid rgba(0, 0, 0, 0.1);
-	}
-
-	nav.active {
-		display: block;
+		box-shadow: -10px 0 30px rgba(0, 0, 0, 0.45);
+		transition: right 0.35s cubic-bezier(0.2, 0.8, 0.2, 1);
+		display: flex;
+		flex-direction: column;
+		gap: 22px;
+		z-index: 998;
 	}
 
 	nav a {
-		display: block;
-		font-size: 2rem;
-		margin: 3rem 0;
+		font-size: 2.1rem;
+		color: var(--text-light);
+		margin: 0;
 	}
 
-	nav a:hover,
-	nav a.active {
-		padding: 1rem;
-		border-radius: 0.5rem;
-		border-bottom: 0.5rem solid var(--accent);
+	/* état ouvert */
+	nav.active {
+		right: 0;
 	}
+
+	/* afficher le menu-btn sur mobile */
+	.menu-btn {
+		display: flex;
+	}
+
+	/* rendre le header plus compact (optionnel) */
+	header {
+		padding: 14px 20px;
+	}
+}
+
+/* verrouillage du scroll quand menu ouvert */
+body.nav-open {
+	overflow: hidden;
 }
 
 section {
@@ -690,26 +724,18 @@ span {
 	font-size: 2rem;
 }
 
-/* Canvas compétences */
-#skills-canvas {
-	position: fixed;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	z-index: 0;
-	background: var(--darker);
-}
+/* -------- ERROR Msg --------- */
 
-/* Node icône */
-.skill-node {
-	position: absolute;
-	font-size: 3rem;
+.error-msg {
 	color: var(--accent);
-	transition: transform 0.3s ease, filter 0.3s ease;
 }
 
-.skill-node:hover {
-	transform: scale(1.4);
-	filter: drop-shadow(0 0 15px var(--accent));
+.error-msg h2 {
+	font-size: 2.5rem;
+	color: var(--accent);
+}
+
+.error-msg p {
+	font-size: 1.2rem;
+	color: var(--accent);
 }
