@@ -73,6 +73,26 @@ nav a.active {
 	border-bottom: 3px solid var(--accent);
 }
 
+/* ===== MENU BURGER ===== */
+.menu-btn {
+	display: none; /* affiché seulement en mobile via media query */
+	width: 36px;
+	height: 28px;
+	padding: 0;
+	background: transparent;
+	border: none;
+	cursor: pointer;
+	flex-direction: column;
+	justify-content: space-between;
+	z-index: 999; /* au-dessus du nav */
+}
+	display: block;
+	height: 4px;
+	width: 100%;
+	background: var(--accent);
+	border-radius: 3px;
+	transition: transform 0.28s ease, opacity 0.2s ease;
+
 @media (max-width: 995px) {
 	nav {
 		position: absolute;

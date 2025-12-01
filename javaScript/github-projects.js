@@ -57,6 +57,14 @@ async function fetchGitHubProjects() {
 			"Erreur lors de la récupération des projets GitHub:",
 			error
 		);
+
+		const card = document.createElement("div");
+		card.classList.add("error-msg");
+		card.innerHTML = `
+			<h2>ERROR</h2>
+			<p>API Request limits</p>
+		`;
+		projectsGrid.appendChild(card);
 	}
 }
 

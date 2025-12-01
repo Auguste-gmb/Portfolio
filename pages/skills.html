@@ -17,7 +17,19 @@
 
 		<header>
 			<a href="../index.html" class="logo">Auguste</a>
-			<nav>
+			<div
+				class="menu-btn"
+				id="menu-btn"
+				aria-label="Ouvrir le menu"
+				aria-expanded="false"
+				aria-controls="nav-menu"
+			>
+				<span></span>
+				<span></span>
+				<span></span>
+			</div>
+
+			<nav id="nav-menu">
 				<a href="../index.html">Accueil</a>
 				<a href="./projects.html">Projets</a>
 				<a href="" class="active">Compétences</a>
@@ -28,10 +40,12 @@
 
 		<section class="skills-section">
 			<h1>Mes Compétences</h1>
-			<p class="subtitle">Voici un aperçu de mes domaines de maîtrise.</p>
+			<p class="subtitle">Explore mes compétences par catégorie.</p>
+
+			<div></div>
 		</section>
 
 		<script src="../javaScript/network.js"></script>
-		<script src="../javaScript/skills.js"></script>
+		<script src="../javaScript/navbar.js"></script>
 	</body>
 </html>

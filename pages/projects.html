@@ -22,7 +22,19 @@
 
 		<header>
 			<a href="../index.html" class="logo">Auguste</a>
-			<nav>
+			<div
+				class="menu-btn"
+				id="menu-btn"
+				aria-label="Ouvrir le menu"
+				aria-expanded="false"
+				aria-controls="nav-menu"
+			>
+				<span></span>
+				<span></span>
+				<span></span>
+			</div>
+
+			<nav id="nav-menu">
 				<a href="../index.html">Accueil</a>
 				<a href="" class="active">Projets</a>
 				<a href="./skills.html">Compétences</a>
@@ -38,8 +50,7 @@
 			</p>
 
 			<div class="projects-grid">
-				<!--
-				<div class="project-card">
+				<!--<div class="project-card">
 					<h2>Projet IA – Reconnaissance d’Images</h2>
 					<p>
 						Un modèle CNN entraîné pour classifier différents objets
@@ -51,11 +62,12 @@
 						<span>Deep Learning</span>
 					</div>
 					<a class="btn" href="#" target="_blank">Voir plus</a>
-				</div>
-            --></div>
+				</div>-->
+			</div>
 		</section>
 
 		<script src="../javaScript/github-projects.js"></script>
 		<script src="../javaScript/network.js"></script>
+		<script src="../javaScript/navbar.js"></script>
 	</body>
 </html>

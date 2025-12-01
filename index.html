@@ -22,7 +22,20 @@
 		<canvas id="network-bg"></canvas>
 		<header>
 			<a href="#" class="logo">Auguste</a>
-			<nav>
+
+			<div
+				class="menu-btn"
+				id="menu-btn"
+				aria-label="Ouvrir le menu"
+				aria-expanded="false"
+				aria-controls="nav-menu"
+			>
+				<span></span>
+				<span></span>
+				<span></span>
+			</div>
+
+			<nav id="nav-menu">
 				<a href="#" class="active">Accueil</a>
 				<a href="pages/projects.html">Projets</a>
 				<a href="pages/skills.html">Compétences</a>
@@ -58,5 +71,6 @@
 			</div>
 		</section>
 		<script src="javaScript/network.js"></script>
+		<script src="javaScript/navbar.js"></script>
 	</body>
 </html>
