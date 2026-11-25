@@ -1,76 +1,394 @@
 <!DOCTYPE html>
 <html lang="fr">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link
-			rel="stylesheet"
-			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
-		/>
-		<link rel="stylesheet" href="style/style.css" />
-		<link rel="preconnect" href="https://fonts.googleapis.com" />
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-		<link
-			rel="stylesheet"
-			href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;600;700&display=swap"
-		/>
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Auguste Gambu — Étudiant en informatique à CESI Rouen | Portfolio</title>
+<meta name="description" content="Portfolio d'Auguste Gambu, étudiant en informatique à CESI Rouen, passionné par les systèmes intelligents et les algorithmes. Projets, compétences, parcours et contact." />
+<meta name="author" content="Auguste Gambu" />
+<meta name="robots" content="index, follow, max-image-preview:large" />
+<link rel="canonical" href="https://auguste-gmb.github.io/Portfolio/" />
+<meta name="theme-color" content="#EFEAE0" />
 
-		<title>Portfolio</title>
-	</head>
+<!-- Icônes -->
+<link rel="icon" href="favicon.ico" sizes="48x48" />
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+<link rel="icon" href="assets/favicon-32.png" type="image/png" sizes="32x32" />
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
+<link rel="manifest" href="site.webmanifest" />
 
-	<body>
-		<canvas id="network-bg"></canvas>
-		<header>
-			<a href="#" class="logo">Auguste</a>
+<!-- Aperçu lors d'un partage (LinkedIn, Discord, WhatsApp, X…) -->
+<meta property="og:type" content="profile" />
+<meta property="og:locale" content="fr_FR" />
+<meta property="og:site_name" content="Auguste Gambu — Portfolio" />
+<meta property="og:url" content="https://auguste-gmb.github.io/Portfolio/" />
+<meta property="og:title" content="Auguste Gambu — Étudiant en informatique à CESI Rouen" />
+<meta property="og:description" content="Systèmes intelligents, algorithmes et développement : mes projets, mon parcours et comment me contacter." />
+<meta property="og:image" content="https://auguste-gmb.github.io/Portfolio/assets/og-image.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="Auguste Gambu, étudiant en informatique à CESI Rouen, à côté d'un graphe où le plus court chemin est tracé en rouge" />
+<meta property="profile:first_name" content="Auguste" />
+<meta property="profile:last_name" content="Gambu" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Auguste Gambu — Étudiant en informatique à CESI Rouen" />
+<meta name="twitter:description" content="Systèmes intelligents, algorithmes et développement : mes projets, mon parcours et comment me contacter." />
+<meta name="twitter:image" content="https://auguste-gmb.github.io/Portfolio/assets/og-image.png" />
 
-			<div
-				class="menu-btn"
-				id="menu-btn"
-				aria-label="Ouvrir le menu"
-				aria-expanded="false"
-				aria-controls="nav-menu"
-			>
-				<span></span>
-				<span></span>
-				<span></span>
-			</div>
+<!-- Données structurées pour Google -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Person",
+      "@id": "https://auguste-gmb.github.io/Portfolio/#auguste",
+      "name": "Auguste Gambu",
+      "givenName": "Auguste",
+      "familyName": "Gambu",
+      "url": "https://auguste-gmb.github.io/Portfolio/",
+      "image": "https://auguste-gmb.github.io/Portfolio/assets/og-image.png",
+      "jobTitle": "Étudiant en informatique",
+      "affiliation": { "@type": "CollegeOrUniversity", "name": "CESI Rouen" },
+      "address": { "@type": "PostalAddress", "addressLocality": "Rouen", "addressCountry": "FR" },
+      "email": "mailto:auguste.gambu@viacesi.fr",
+      "knowsAbout": ["Algorithmique", "Systèmes intelligents", "Intelligence artificielle", "Développement web"],
+      "sameAs": [
+        "https://github.com/Auguste-gmb",
+        "https://www.linkedin.com/in/auguste-gambu-a299a533b/"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://auguste-gmb.github.io/Portfolio/#site",
+      "url": "https://auguste-gmb.github.io/Portfolio/",
+      "name": "Auguste Gambu — Portfolio",
+      "inLanguage": "fr-FR",
+      "author": { "@id": "https://auguste-gmb.github.io/Portfolio/#auguste" }
+    }
+  ]
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=IBM+Plex+Mono:wght@400;500&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="style/style.css" />
+</head>
+<body>
 
-			<nav id="nav-menu">
-				<a href="#" class="active">Accueil</a>
-				<a href="pages/projects.html">Projets</a>
-				<a href="pages/skills.html">Compétences</a>
-				<a href="pages/experience.html">Expériences</a>
-				<a href="pages/contact.html">Contact</a>
-			</nav>
-		</header>
+<header>
+  <div class="wrap">
+    <a href="#top" class="mark" aria-label="Accueil"><span>A</span><span>U</span><span>G</span><span></span></a>
+    <nav id="nav" aria-label="Navigation principale">
+      <ul>
+        <li><a href="#apropos">À propos</a></li>
+        <li><a href="#projets">Projets</a></li>
+        <li><a href="#competences">Compétences</a></li>
+        <li><a href="#parcours">Parcours</a></li>
+      </ul>
+    </nav>
+    <div style="display:flex;gap:10px">
+      <a href="#contact" class="btn small">Contact →</a>
+      <button class="btn small menu-toggle" id="menuBtn" aria-expanded="false" aria-controls="nav">Menu</button>
+    </div>
+  </div>
+</header>
 
-		<section class="home">
-			<div class="home-img">
-				<img src="" alt="" />
-			</div>
-			<div class="home-content">
-				<h1><span>Auguste</span></h1>
-				<h3 class="typing-text"><span></span></h3>
-				<p class="intro">
-					Étudiant en informatique à CESI Rouen. Curieux, motivé et
-					passionné par les systèmes intelligents et les algorithmes.
-				</p>
+<main id="top">
 
-				<div class="social-icons">
-					<a
-						href="https://www.linkedin.com/in/auguste-gambu-a299a533b/"
-						target="_blank"
-						><i class="fa-brands fa-linkedin"></i
-					></a>
-					<a href="https://github.com/Auguste-gmb" target="_blank"
-						><i class="fa-brands fa-github"></i
-					></a>
-				</div>
+  <!-- 01 · HERO -->
+  <div class="hero">
+    <div class="wrap">
+      <div>
+        <p class="idx kicker"><b>01</b><i></i>Étudiant en informatique · CESI Rouen</p>
+        <h1>Auguste<br>Gambu<span class="dot">.</span></h1>
+        <p class="lede">Je m'intéresse aux <em>systèmes intelligents</em> et aux <em>algorithmes</em> : comment une machine cherche, choisit et trouve son chemin.</p>
+        <div class="ctas">
+          <a href="#projets" class="btn solid">Voir les projets →</a>
+          <a href="#contact" class="btn">Me contacter</a>
+        </div>
+        <p class="idx hero-foot"><b>N° 2026</b><i></i>Rouen, France</p>
+      </div>
 
-				<a href="pages/contact.html" class="btn">Me Contacter</a>
-			</div>
-		</section>
-		<script src="javaScript/network.js"></script>
-		<script src="javaScript/navbar.js"></script>
-	</body>
+      <figure class="fig" aria-label="Graphe pondéré interactif : le plus court chemin depuis A est tracé en rouge">
+        <span class="vert" aria-hidden="true">Curiosité &amp; logique</span>
+        <svg viewBox="40 30 470 510" id="graph">
+          <defs>
+            <filter id="rough" x="-5%" y="-5%" width="110%" height="110%">
+              <feTurbulence type="fractalNoise" baseFrequency=".035" numOctaves="2" seed="4" result="t"/>
+              <feDisplacementMap in="SourceGraphic" in2="t" scale="2.4"/>
+            </filter>
+          </defs>
+<g class="ink"><path d="M70.0 90.0 Q139.6 72.9 210.0 60.0" class="e" data-e="AB"/><path d="M71.0 89.0 Q138.9 69.5 209.0 61.0" class="e e2" data-e="AB"/>
+<path d="M70.0 90.0 Q98.4 155.8 130.0 220.0" class="e" data-e="AE"/><path d="M71.0 89.0 Q106.3 152.2 129.0 221.0" class="e e2" data-e="AE"/>
+<path d="M210.0 60.0 Q284.9 85.4 360.0 110.0" class="e" data-e="BC"/><path d="M211.0 59.0 Q285.7 83.0 359.0 111.0" class="e e2" data-e="BC"/>
+<path d="M210.0 60.0 Q247.3 130.3 275.0 205.0" class="e" data-e="BF"/><path d="M211.0 59.0 Q242.4 132.5 274.0 206.0" class="e e2" data-e="BF"/>
+<path d="M360.0 110.0 Q413.1 84.8 470.0 70.0" class="e" data-e="CD"/><path d="M361.0 109.0 Q414.6 89.0 469.0 71.0" class="e e2" data-e="CD"/>
+<path d="M360.0 110.0 Q321.3 160.9 275.0 205.0" class="e" data-e="CF"/><path d="M361.0 109.0 Q322.4 161.9 274.0 206.0" class="e e2" data-e="CF"/>
+<path d="M360.0 110.0 Q390.8 174.6 420.0 240.0" class="e" data-e="CG"/><path d="M361.0 109.0 Q385.2 177.1 419.0 241.0" class="e e2" data-e="CG"/>
+<path d="M470.0 70.0 Q449.3 156.3 420.0 240.0" class="e" data-e="DG"/><path d="M471.0 69.0 Q449.2 156.3 419.0 241.0" class="e e2" data-e="DG"/>
+<path d="M130.0 220.0 Q202.7 214.0 275.0 205.0" class="e" data-e="EF"/><path d="M131.0 219.0 Q203.1 219.6 274.0 206.0" class="e e2" data-e="EF"/>
+<path d="M130.0 220.0 Q104.1 294.7 80.0 370.0" class="e" data-e="EH"/><path d="M131.0 219.0 Q106.6 295.5 79.0 371.0" class="e e2" data-e="EH"/>
+<path d="M130.0 220.0 Q170.4 285.8 220.0 345.0" class="e" data-e="EI"/><path d="M131.0 219.0 Q181.0 278.4 219.0 346.0" class="e e2" data-e="EI"/>
+<path d="M275.0 205.0 Q243.5 273.4 220.0 345.0" class="e" data-e="FI"/><path d="M276.0 204.0 Q250.6 276.3 219.0 346.0" class="e e2" data-e="FI"/>
+<path d="M275.0 205.0 Q313.9 285.8 345.0 370.0" class="e" data-e="FJ"/><path d="M276.0 204.0 Q315.7 285.2 344.0 371.0" class="e e2" data-e="FJ"/>
+<path d="M275.0 205.0 Q348.0 220.3 420.0 240.0" class="e" data-e="FG"/><path d="M276.0 204.0 Q346.2 227.4 419.0 241.0" class="e e2" data-e="FG"/>
+<path d="M420.0 240.0 Q448.6 316.3 470.0 395.0" class="e" data-e="GK"/><path d="M421.0 239.0 Q443.8 317.9 469.0 396.0" class="e e2" data-e="GK"/>
+<path d="M420.0 240.0 Q381.1 304.2 345.0 370.0" class="e" data-e="GJ"/><path d="M421.0 239.0 Q384.3 306.0 344.0 371.0" class="e e2" data-e="GJ"/>
+<path d="M80.0 370.0 Q150.1 358.1 220.0 345.0" class="e" data-e="HI"/><path d="M81.0 369.0 Q148.8 350.6 219.0 346.0" class="e e2" data-e="HI"/>
+<path d="M80.0 370.0 Q119.7 432.5 150.0 500.0" class="e" data-e="HL"/><path d="M81.0 369.0 Q119.2 432.8 149.0 501.0" class="e e2" data-e="HL"/>
+<path d="M220.0 345.0 Q282.1 359.6 345.0 370.0" class="e" data-e="IJ"/><path d="M221.0 344.0 Q282.7 356.4 344.0 371.0" class="e e2" data-e="IJ"/>
+<path d="M220.0 345.0 Q187.0 423.4 150.0 500.0" class="e" data-e="IL"/><path d="M221.0 344.0 Q183.8 421.9 149.0 501.0" class="e e2" data-e="IL"/>
+<path d="M220.0 345.0 Q260.5 422.2 300.0 500.0" class="e" data-e="IM"/><path d="M221.0 344.0 Q262.9 421.1 299.0 501.0" class="e e2" data-e="IM"/>
+<path d="M345.0 370.0 Q406.8 386.0 470.0 395.0" class="e" data-e="JK"/><path d="M346.0 369.0 Q406.8 385.6 469.0 396.0" class="e e2" data-e="JK"/>
+<path d="M345.0 370.0 Q325.4 436.0 300.0 500.0" class="e" data-e="JM"/><path d="M346.0 369.0 Q321.4 434.6 299.0 501.0" class="e e2" data-e="JM"/>
+<path d="M470.0 395.0 Q457.2 457.4 445.0 520.0" class="e" data-e="KN"/><path d="M471.0 394.0 Q451.6 456.3 444.0 521.0" class="e e2" data-e="KN"/>
+<path d="M150.0 500.0 Q225.0 502.8 300.0 500.0" class="e" data-e="LM"/><path d="M151.0 499.0 Q225.0 496.6 299.0 501.0" class="e e2" data-e="LM"/>
+<path d="M300.0 500.0 Q371.7 515.7 445.0 520.0" class="e" data-e="MN"/><path d="M301.0 499.0 Q373.4 504.0 444.0 521.0" class="e e2" data-e="MN"/></g>
+<g class="hots"><path d="M70.0 90.0 Q139.6 72.9 210.0 60.0" class="hot" data-e="AB" pathLength="1"/><path d="M210.0 60.0 Q139.6 72.9 70.0 90.0" class="hot" data-e="BA" pathLength="1"/>
+<path d="M70.0 90.0 Q98.4 155.8 130.0 220.0" class="hot" data-e="AE" pathLength="1"/><path d="M130.0 220.0 Q98.4 155.8 70.0 90.0" class="hot" data-e="EA" pathLength="1"/>
+<path d="M210.0 60.0 Q284.9 85.4 360.0 110.0" class="hot" data-e="BC" pathLength="1"/><path d="M360.0 110.0 Q284.9 85.4 210.0 60.0" class="hot" data-e="CB" pathLength="1"/>
+<path d="M210.0 60.0 Q247.3 130.3 275.0 205.0" class="hot" data-e="BF" pathLength="1"/><path d="M275.0 205.0 Q247.3 130.3 210.0 60.0" class="hot" data-e="FB" pathLength="1"/>
+<path d="M360.0 110.0 Q413.1 84.8 470.0 70.0" class="hot" data-e="CD" pathLength="1"/><path d="M470.0 70.0 Q413.1 84.8 360.0 110.0" class="hot" data-e="DC" pathLength="1"/>
+<path d="M360.0 110.0 Q321.3 160.9 275.0 205.0" class="hot" data-e="CF" pathLength="1"/><path d="M275.0 205.0 Q321.3 160.9 360.0 110.0" class="hot" data-e="FC" pathLength="1"/>
+<path d="M360.0 110.0 Q390.8 174.6 420.0 240.0" class="hot" data-e="CG" pathLength="1"/><path d="M420.0 240.0 Q390.8 174.6 360.0 110.0" class="hot" data-e="GC" pathLength="1"/>
+<path d="M470.0 70.0 Q449.3 156.3 420.0 240.0" class="hot" data-e="DG" pathLength="1"/><path d="M420.0 240.0 Q449.3 156.3 470.0 70.0" class="hot" data-e="GD" pathLength="1"/>
+<path d="M130.0 220.0 Q202.7 214.0 275.0 205.0" class="hot" data-e="EF" pathLength="1"/><path d="M275.0 205.0 Q202.7 214.0 130.0 220.0" class="hot" data-e="FE" pathLength="1"/>
+<path d="M130.0 220.0 Q104.1 294.7 80.0 370.0" class="hot" data-e="EH" pathLength="1"/><path d="M80.0 370.0 Q104.1 294.7 130.0 220.0" class="hot" data-e="HE" pathLength="1"/>
+<path d="M130.0 220.0 Q170.4 285.8 220.0 345.0" class="hot" data-e="EI" pathLength="1"/><path d="M220.0 345.0 Q170.4 285.8 130.0 220.0" class="hot" data-e="IE" pathLength="1"/>
+<path d="M275.0 205.0 Q243.5 273.4 220.0 345.0" class="hot" data-e="FI" pathLength="1"/><path d="M220.0 345.0 Q243.5 273.4 275.0 205.0" class="hot" data-e="IF" pathLength="1"/>
+<path d="M275.0 205.0 Q313.9 285.8 345.0 370.0" class="hot" data-e="FJ" pathLength="1"/><path d="M345.0 370.0 Q313.9 285.8 275.0 205.0" class="hot" data-e="JF" pathLength="1"/>
+<path d="M275.0 205.0 Q348.0 220.3 420.0 240.0" class="hot" data-e="FG" pathLength="1"/><path d="M420.0 240.0 Q348.0 220.3 275.0 205.0" class="hot" data-e="GF" pathLength="1"/>
+<path d="M420.0 240.0 Q448.6 316.3 470.0 395.0" class="hot" data-e="GK" pathLength="1"/><path d="M470.0 395.0 Q448.6 316.3 420.0 240.0" class="hot" data-e="KG" pathLength="1"/>
+<path d="M420.0 240.0 Q381.1 304.2 345.0 370.0" class="hot" data-e="GJ" pathLength="1"/><path d="M345.0 370.0 Q381.1 304.2 420.0 240.0" class="hot" data-e="JG" pathLength="1"/>
+<path d="M80.0 370.0 Q150.1 358.1 220.0 345.0" class="hot" data-e="HI" pathLength="1"/><path d="M220.0 345.0 Q150.1 358.1 80.0 370.0" class="hot" data-e="IH" pathLength="1"/>
+<path d="M80.0 370.0 Q119.7 432.5 150.0 500.0" class="hot" data-e="HL" pathLength="1"/><path d="M150.0 500.0 Q119.7 432.5 80.0 370.0" class="hot" data-e="LH" pathLength="1"/>
+<path d="M220.0 345.0 Q282.1 359.6 345.0 370.0" class="hot" data-e="IJ" pathLength="1"/><path d="M345.0 370.0 Q282.1 359.6 220.0 345.0" class="hot" data-e="JI" pathLength="1"/>
+<path d="M220.0 345.0 Q187.0 423.4 150.0 500.0" class="hot" data-e="IL" pathLength="1"/><path d="M150.0 500.0 Q187.0 423.4 220.0 345.0" class="hot" data-e="LI" pathLength="1"/>
+<path d="M220.0 345.0 Q260.5 422.2 300.0 500.0" class="hot" data-e="IM" pathLength="1"/><path d="M300.0 500.0 Q260.5 422.2 220.0 345.0" class="hot" data-e="MI" pathLength="1"/>
+<path d="M345.0 370.0 Q406.8 386.0 470.0 395.0" class="hot" data-e="JK" pathLength="1"/><path d="M470.0 395.0 Q406.8 386.0 345.0 370.0" class="hot" data-e="KJ" pathLength="1"/>
+<path d="M345.0 370.0 Q325.4 436.0 300.0 500.0" class="hot" data-e="JM" pathLength="1"/><path d="M300.0 500.0 Q325.4 436.0 345.0 370.0" class="hot" data-e="MJ" pathLength="1"/>
+<path d="M470.0 395.0 Q457.2 457.4 445.0 520.0" class="hot" data-e="KN" pathLength="1"/><path d="M445.0 520.0 Q457.2 457.4 470.0 395.0" class="hot" data-e="NK" pathLength="1"/>
+<path d="M150.0 500.0 Q225.0 502.8 300.0 500.0" class="hot" data-e="LM" pathLength="1"/><path d="M300.0 500.0 Q225.0 502.8 150.0 500.0" class="hot" data-e="ML" pathLength="1"/>
+<path d="M300.0 500.0 Q371.7 515.7 445.0 520.0" class="hot" data-e="MN" pathLength="1"/><path d="M445.0 520.0 Q371.7 515.7 300.0 500.0" class="hot" data-e="NM" pathLength="1"/></g>
+<text x="140" y="74" class="w" data-w="AB">4</text>
+<text x="99" y="155" class="w" data-w="AE">3</text>
+<text x="285" y="85" class="w" data-w="BC">5</text>
+<text x="245" y="131" class="w" data-w="BF">6</text>
+<text x="414" y="87" class="w" data-w="CD">3</text>
+<text x="319" y="159" class="w" data-w="CF">2</text>
+<text x="390" y="175" class="w" data-w="CG">4</text>
+<text x="447" y="156" class="w" data-w="DG">5</text>
+<text x="203" y="213" class="w" data-w="EF">7</text>
+<text x="105" y="295" class="w" data-w="EH">4</text>
+<text x="173" y="284" class="w" data-w="EI">5</text>
+<text x="245" y="274" class="w" data-w="FI">3</text>
+<text x="312" y="287" class="w" data-w="FJ">6</text>
+<text x="348" y="221" class="w" data-w="FG">5</text>
+<text x="447" y="317" class="w" data-w="GK">3</text>
+<text x="382" y="305" class="w" data-w="GJ">4</text>
+<text x="150" y="358" class="w" data-w="HI">4</text>
+<text x="117" y="434" class="w" data-w="HL">5</text>
+<text x="282" y="359" class="w" data-w="IJ">3</text>
+<text x="186" y="423" class="w" data-w="IL">6</text>
+<text x="260" y="422" class="w" data-w="IM">5</text>
+<text x="407" y="384" class="w" data-w="JK">4</text>
+<text x="324" y="436" class="w" data-w="JM">3</text>
+<text x="457" y="457" class="w" data-w="KN">4</text>
+<text x="225" y="501" class="w" data-w="LM">4</text>
+<text x="372" y="513" class="w" data-w="MN">5</text>
+<g class="nd" data-n="A" tabindex="0" role="button" aria-label="Chemin de A vers A"><circle cx="70" cy="90" r="22" class="hit"/><circle cx="70" cy="90" r="16" class="ring"/><circle cx="70" cy="90" r="9" class="n"/><text x="86" y="77" class="lbl" text-anchor="start">A</text></g>
+<g class="nd" data-n="B" tabindex="0" role="button" aria-label="Chemin de A vers B"><circle cx="210" cy="60" r="22" class="hit"/><circle cx="210" cy="60" r="16" class="ring"/><circle cx="210" cy="60" r="9" class="n"/><text x="226" y="47" class="lbl" text-anchor="start">B</text></g>
+<g class="nd" data-n="C" tabindex="0" role="button" aria-label="Chemin de A vers C"><circle cx="360" cy="110" r="22" class="hit"/><circle cx="360" cy="110" r="16" class="ring"/><circle cx="360" cy="110" r="9" class="n"/><text x="376" y="97" class="lbl" text-anchor="start">C</text></g>
+<g class="nd" data-n="D" tabindex="0" role="button" aria-label="Chemin de A vers D"><circle cx="470" cy="70" r="22" class="hit"/><circle cx="470" cy="70" r="16" class="ring"/><circle cx="470" cy="70" r="9" class="n"/><text x="454" y="57" class="lbl" text-anchor="end">D</text></g>
+<g class="nd" data-n="E" tabindex="0" role="button" aria-label="Chemin de A vers E"><circle cx="130" cy="220" r="22" class="hit"/><circle cx="130" cy="220" r="16" class="ring"/><circle cx="130" cy="220" r="9" class="n"/><text x="146" y="207" class="lbl" text-anchor="start">E</text></g>
+<g class="nd" data-n="F" tabindex="0" role="button" aria-label="Chemin de A vers F"><circle cx="275" cy="205" r="22" class="hit"/><circle cx="275" cy="205" r="16" class="ring"/><circle cx="275" cy="205" r="9" class="n"/><text x="291" y="192" class="lbl" text-anchor="start">F</text></g>
+<g class="nd" data-n="G" tabindex="0" role="button" aria-label="Chemin de A vers G"><circle cx="420" cy="240" r="22" class="hit"/><circle cx="420" cy="240" r="16" class="ring"/><circle cx="420" cy="240" r="9" class="n"/><text x="404" y="227" class="lbl" text-anchor="end">G</text></g>
+<g class="nd" data-n="H" tabindex="0" role="button" aria-label="Chemin de A vers H"><circle cx="80" cy="370" r="22" class="hit"/><circle cx="80" cy="370" r="16" class="ring"/><circle cx="80" cy="370" r="9" class="n"/><text x="96" y="357" class="lbl" text-anchor="start">H</text></g>
+<g class="nd" data-n="I" tabindex="0" role="button" aria-label="Chemin de A vers I"><circle cx="220" cy="345" r="22" class="hit"/><circle cx="220" cy="345" r="16" class="ring"/><circle cx="220" cy="345" r="9" class="n"/><text x="236" y="332" class="lbl" text-anchor="start">I</text></g>
+<g class="nd" data-n="J" tabindex="0" role="button" aria-label="Chemin de A vers J"><circle cx="345" cy="370" r="22" class="hit"/><circle cx="345" cy="370" r="16" class="ring"/><circle cx="345" cy="370" r="9" class="n"/><text x="361" y="357" class="lbl" text-anchor="start">J</text></g>
+<g class="nd" data-n="K" tabindex="0" role="button" aria-label="Chemin de A vers K"><circle cx="470" cy="395" r="22" class="hit"/><circle cx="470" cy="395" r="16" class="ring"/><circle cx="470" cy="395" r="9" class="n"/><text x="454" y="382" class="lbl" text-anchor="end">K</text></g>
+<g class="nd" data-n="L" tabindex="0" role="button" aria-label="Chemin de A vers L"><circle cx="150" cy="500" r="22" class="hit"/><circle cx="150" cy="500" r="16" class="ring"/><circle cx="150" cy="500" r="9" class="n"/><text x="166" y="487" class="lbl" text-anchor="start">L</text></g>
+<g class="nd" data-n="M" tabindex="0" role="button" aria-label="Chemin de A vers M"><circle cx="300" cy="500" r="22" class="hit"/><circle cx="300" cy="500" r="16" class="ring"/><circle cx="300" cy="500" r="9" class="n"/><text x="316" y="487" class="lbl" text-anchor="start">M</text></g>
+<g class="nd" data-n="N" tabindex="0" role="button" aria-label="Chemin de A vers N"><circle cx="445" cy="520" r="22" class="hit"/><circle cx="445" cy="520" r="16" class="ring"/><circle cx="445" cy="520" r="9" class="n"/><text x="429" y="507" class="lbl" text-anchor="end">N</text></g>
+        </svg>
+        <figcaption class="mono"><span>Fig. 01 — Dijkstra, de A à <b id="dst">N</b><span class="hint">Clique sur un nœud pour changer de destination</span></span><span class="r" id="cost">coût = 18</span></figcaption>
+      </figure>
+    </div>
+  </div>
+
+  <div class="band" aria-hidden="true">
+    <div class="wrap">
+      <span class="mono"><span class="star">✦</span>&nbsp;&nbsp;Carnet de travail</span>
+      <span class="mono mid"><span>Systèmes intelligents</span><span>//</span><span>Algorithmes</span><span>//</span><span>Développement</span><span>//</span><span>Projets</span></span>
+      <span class="mono">Toujours en chantier&nbsp;&nbsp;<span class="star">✦</span></span>
+    </div>
+  </div>
+
+  <!-- 02 · À PROPOS -->
+  <section class="about" id="apropos">
+    <div class="wrap">
+      <div class="jp" aria-hidden="true">Apprendre, encore</div>
+      <div>
+        <p class="idx"><b>02</b><i></i>À propos</p>
+        <h2 style="margin-top:22px">Un esprit<br>curieux<span class="dot">.</span></h2>
+        <p>Étudiant en informatique à CESI Rouen, curieux et motivé. Ce qui m'attire : les systèmes intelligents et les algorithmes, le moment où un problème flou devient une suite d'étapes claires.</p>
+        <p>Ce site rassemble mes projets, mon parcours, et la façon la plus simple de me joindre.</p>
+      </div>
+      <aside class="sheet">
+        <div class="top mono"><span>Fiche</span><span>Réf. AG–01</span></div>
+        <dl>
+          <dt>Nom</dt><dd>Auguste Gambu</dd>
+          <dt>Formation</dt><dd>Informatique — CESI Rouen</dd>
+          <dt>Basé à</dt><dd>Rouen, France</dd>
+          <dt>Intérêts</dt><dd>Systèmes intelligents, algorithmes</dd>
+          <dt>Ailleurs</dt><dd><a href="https://github.com/Auguste-gmb" target="_blank" rel="noopener">GitHub</a> · <a href="https://www.linkedin.com/in/auguste-gambu-a299a533b/" target="_blank" rel="noopener">LinkedIn</a></dd>
+        </dl>
+      </aside>
+    </div>
+  </section>
+
+  <!-- 03 · PROJETS -->
+  <section class="projects" id="projets">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2>Projets<span class="dot">.</span></h2>
+        <p class="idx"><b>03</b><i></i>Depuis GitHub</p>
+      </div>
+      <div class="grid" id="grid">
+        <div class="card skel"><div class="meta mono"><span>N° 01</span></div><h3>Chargement…</h3></div>
+        <div class="card skel"><div class="meta mono"><span>N° 02</span></div><h3>&nbsp;</h3></div>
+        <div class="card skel"><div class="meta mono"><span>N° 03</span></div><h3>&nbsp;</h3></div>
+      </div>
+      <noscript><p class="mono" style="margin-top:20px">Active JavaScript pour voir la liste, ou retrouve tous mes projets sur <a href="https://github.com/Auguste-gmb">github.com/Auguste-gmb</a>.</p></noscript>
+      <p class="grid-note mono"><span>Les dépôts publics sont listés automatiquement.</span><a href="https://github.com/Auguste-gmb" target="_blank" rel="noopener">Tout voir sur GitHub →</a></p>
+    </div>
+  </section>
+
+  <!-- 04 · COMPÉTENCES -->
+  <section class="skills" id="competences">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2>Compétences<span class="dot">.</span></h2>
+        <p class="idx"><b>04</b><i></i>Outils &amp; domaines</p>
+      </div>
+      <div class="cols">
+        <div>
+          <h3 class="mono sub">Langages — d'après mes dépôts</h3>
+          <ul class="gauge" id="gauge">
+            <li><span class="nm">…</span><span class="bar"><i style="width:0"></i></span><span class="ct"></span></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="mono sub">Domaines</h3>
+          <!-- ✏️ À compléter / ajuster avec tes vraies compétences -->
+          <ol class="domains">
+            <li><div><strong>Algorithmique</strong><span>Structures de données, graphes, recherche de chemin.</span></div></li>
+            <li><div><strong>Systèmes intelligents</strong><span>Comprendre comment une machine apprend et décide.</span></div></li>
+            <li><div><strong>Développement web</strong><span>HTML, CSS, JavaScript — ce site en est un exemple.</span></div></li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 05 · PARCOURS -->
+  <section class="timeline" id="parcours" style="padding-top:0">
+    <div class="wrap">
+      <div class="sec-head" style="border:0">
+        <h2>Parcours<span class="dot">.</span></h2>
+        <p class="idx"><b>05</b><i></i>Formation &amp; expériences</p>
+      </div>
+      <div class="path-group is-formation">
+        <h3 class="group-head"><span class="mk" aria-hidden="true"></span>Formation<span class="ct">01</span></h3>
+        <ol class="path-list">
+          <li class="now">
+            <div class="yr">2024 - Auj.</div>
+            <h4>CESI Rouen<span>Rouen, France</span></h4>
+            <p>Cycle préparatoire intégré au cursus ingénieur.</p>
+            <span class="tag">En cours</span>
+          </li>
+
+          <li>
+            <div class="yr">2021 - 2024.</div>
+            <h4>Lycée Galilée<span>Franqueville-Saint-Pierre, France</span></h4>
+            <p>Baccalauréat Général.</p>
+            <span class="tag">Obtenue</span>
+          </li>
+        </ol>
+      </div>
+
+      <div class="path-group is-exp">
+        <h3 class="group-head"><span class="mk" aria-hidden="true"></span>Expériences<span class="ct">02</span></h3>
+        <ol class="path-list">
+          
+          <li>
+            <div class="yr">Avril - Juillet 2026</div>
+            <h4>Crédit Agricole<span>Stagiaire Développeur .NET</span></h4>
+            <p>Développement et maintenance d'application interne.</p>
+            <span class="tag">Stage</span>
+          </li>
+
+          <li>
+            <div class="yr">2024 <small>&amp;</small> 2025</div>
+            <h4>Centre de loisirs<span>Animateur · été</span></h4>
+            <p>Animateur dans un centre de loisirs pendant les vacances d'été.</p>
+            <span class="tag">Emploi saisonnier</span>
+          </li>
+
+          <li>
+            <div class="yr">2021</div>
+            <h4>Sysoco<span>Stage de 3ᵉ</span></h4>
+            <p>Découverte d'une entreprise de radiotélécommunication.</p>
+            <span class="tag">Stage</span>
+          </li>
+
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <!-- 06 · CONTACT -->
+  <section class="contact" id="contact">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="idx"><b>06</b><i></i>Contact</p>
+        <p class="mono" style="color:rgba(239,234,224,.5)">Réponse sous quelques jours</p>
+      </div>
+      <div class="cols">
+        <div>
+          <h2>On en<br>parle<span class="dot">&nbsp;?</span></h2>
+          <ul class="info">
+            <li><span class="mono">Ville</span><span>Rouen, France</span></li>
+          </ul>
+        </div>
+        <form id="contactForm" action="https://formspree.io/f/mojjeoqk" method="POST">
+          <div><label for="name">Nom</label><input id="name" name="name" type="text" placeholder="Votre nom" required /></div>
+          <div><label for="email">Email</label><input id="email" name="email" type="email" placeholder="vous@exemple.fr" required /></div>
+          <div><label for="message">Message</label><textarea id="message" name="message" rows="4" placeholder="Bonjour Auguste…" required></textarea></div>
+          <input type="text" name="_gotcha" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true" />
+          <button type="submit" class="btn solid">Envoyer →</button>
+          <p class="form-msg" id="formMsg" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <a href="#top" class="mark" aria-label="Haut de page"><span>A</span><span>U</span><span>G</span><span></span></a>
+    <div class="links mono">
+      <a href="https://github.com/Auguste-gmb" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://www.linkedin.com/in/auguste-gambu-a299a533b/" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
+    <span class="mono">© 2026 — Fait main, à Rouen</span>
+  </div>
+</footer>
+
+<script src="javaScript/graph.js"></script>
+<script src="javaScript/contact.js"></script>
+<script src="javaScript/navbar.js"></script>
+<script src="javaScript/github-projects.js"></script>
+</body>
 </html>
